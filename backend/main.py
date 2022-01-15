@@ -43,6 +43,10 @@ def message(json, methods=['GET','POST']):
 	# print("Recieved message")
 	socketio.emit('image', json )
 
+def run_main():
+    socketio.run(app)
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1")
+    socketio.run(app)
+
+

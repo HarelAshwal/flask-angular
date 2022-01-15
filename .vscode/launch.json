@@ -13,6 +13,14 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "FrontEnd pyWebView",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/backend/",
+            "program": "${workspaceRoot}/backend/gui_starter.py",
+            "console": "integratedTerminal"
+        },
+        {
             "type": "pwa-chrome",
             "name": "FrontEnd",
             "request": "launch",
@@ -25,7 +33,7 @@
             "name": "Back/Front End",
             "configurations": [
                 "Backend",
-                "FrontEnd"
+                "FrontEnd pyWebView"
             ]
         }
     ]
