@@ -16,7 +16,7 @@
             "type": "pwa-chrome",
             "name": "FrontEnd",
             "request": "launch",
-            "webRoot": "${workspaceFolder}/templates/",
+            "webRoot": "${workspaceFolder}/frontend/",
             "url": "http://127.0.0.1:5000"
         }
     ],
