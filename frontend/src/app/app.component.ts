@@ -16,20 +16,24 @@ export class AppComponent {
     this.init();
   }
   title = 'frontend';
-
+  lastCalledTime : any;
+  fps : number;    
+  
   init() {
     this.socketService.socket.emit("check");
     this.socketService.socket.on('image', (msg: any) => {
       console.log("new image!!!");
-      // if (!lastCalledTime) {
-      //   lastCalledTime = Date.now();
-      //   fps = 0;
-      //   return;
-      // }
-      // delta = (Date.now() - lastCalledTime) / 1000;
-      // lastCalledTime = Date.now();
-      // fps = 1 / delta;
-      // console.log(fps);
+      if (!this.lastCalledTime) {
+        this.lastCalledTime = Date.now();
+        this.fps = 0;
+      }
+      else
+      {
+       let delta = (Date.now() - this.lastCalledTime) / 1000;
+       this.lastCalledTime = Date.now();
+       this.fps = 1 / delta;
+      }
+      
 
       const image_element = this.image1.nativeElement;
       image_element.src = "data:image/jpeg;base64," + msg;

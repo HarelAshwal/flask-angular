@@ -1,3 +1,8 @@
+# fix windows registry stuff
+import mimetypes
+mimetypes.add_type('application/javascript', '.js')
+mimetypes.add_type('text/css', '.css')
+
 from flask import Flask, send_from_directory, redirect, jsonify
 from flask_socketio import SocketIO,emit
 
