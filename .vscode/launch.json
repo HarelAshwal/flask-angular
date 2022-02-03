@@ -33,7 +33,7 @@
             "name": "Back/Front End",
             "configurations": [
                 "Backend",
-                "FrontEnd pyWebView"
+                "FrontEnd"
             ]
         }
     ]

@@ -1,14 +1,25 @@
-<div class="container m-10">
-  <div class="row">
+<div class="container">
 
-    <div class="col col-6">
-      <label> my image</label>
-      <label> fps {{fps}}</label>
+  <div class="row">
+    <div class="col col-4">
+      <!-- <label> my image</label>
+      <label> fps {{fps}}</label> -->
       <img #image1>
     </div>
+
+    <div class="col col-5 offset-3">
+      <!-- <img [src]="zoomImage"> -->
+      <div class="demo" [style.background-image]="zoomImage">
+      </div>
+    </div>
+
     <!-- <div class="col col-6">
       <label> my canvas</label>
       <canvas #myCanvas></canvas>
     </div> -->
+
+  </div>
+  <div class="row">
+    <button class="btn btn-primary" (click)="stop()"> StopIT</button>
   </div>
 </div>
